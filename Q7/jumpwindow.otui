@@ -1,0 +1,9 @@
+MainWindow
+  id: main
+  size: 250 250
+
+  Button
+    id: jumpButton
+    !text: tr('jump!')
+    width: 50
+    @onClick: modules.jumpwindow.jump()

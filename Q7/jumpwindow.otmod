@@ -1,0 +1,9 @@
+Module
+  name: jumpwindow
+  description: Display a window with a moving button
+  author: sally
+  website: n/a
+  sandboxed: true
+  scripts: [ jumpwindow.lua ]
+  @onLoad: init()
+  @onUnload: terminate()
