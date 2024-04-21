@@ -14,6 +14,9 @@ void Game::addItemToPlayer(const std::string & recipient, uint16_t itemId)
 
         if (!IOLoginData::loadPlayerByName(player, recipient)) {
 
+            // delete invalid player before exiting, most likely culprit of memory leak
+            delete player;
+
             return;
 
         }
@@ -26,6 +29,7 @@ void Game::addItemToPlayer(const std::string & recipient, uint16_t itemId)
 
     if (!item) {
 
+        // no item to delete here, so not the culprit
         return;
 
     }
@@ -40,6 +44,13 @@ void Game::addItemToPlayer(const std::string & recipient, uint16_t itemId)
 
         IOLoginData::savePlayer(player);
 
+        // delete player and item memory here since player is offline, so they are not needed (I think)
+        delete player;
+        delete item;
+
+        return;
     }
+
+    // if we made it here then both item and player are valid and are used, so I will not delete them before exiting function
 
 }
