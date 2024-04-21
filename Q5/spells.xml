@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spells>
+	<!-- Custom Spells -->
+	<!-- Added this in the spells.xml file in the server's data folder -->
+	<instant group="attack" spellid="300" name="Winter" words="frigo" level="1" mana="1" premium="0" selftarget="1" cooldown="4000" groupcooldown="4000" needlearn="0" script="custom/winter.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Knight" />
+		<vocation name="Master Sorcerer" />
+		<vocation name="Elder Druid" />
+		<vocation name="Royal Paladin" />
+		<vocation name="Elite Knight" />
+	</instant>
+</spells>
