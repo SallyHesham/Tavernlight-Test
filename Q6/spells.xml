@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spells>
+	<!-- Custom Spells -->
+	<!-- Added this in the spells.xml file in the server's data folder -->
+	<instant group="support" spellid="500" name="Dash" words="dash" level="1" mana="0" premium="0" selftarget="1" cooldown="1000" groupcooldown="1000" aggressive="0" script="custom/dash.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Knight" />
+		<vocation name="Master Sorcerer" />
+		<vocation name="Elder Druid" />
+		<vocation name="Royal Paladin" />
+		<vocation name="Elite Knight" />
+	</instant>
+</spells>
